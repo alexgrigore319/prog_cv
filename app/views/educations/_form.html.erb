@@ -11,6 +11,30 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :activities %><br />
+    <%= f.text_field :activities %>
+  </div>
+  <div class="field">
+    <%= f.label :degree %><br />
+    <%= f.text_field :degree %>
+  </div>
+  <div class="field">
+    <%= f.label :endtime %><br />
+    <%= f.datetime_select :endtime %>
+  </div>
+  <div class="field">
+    <%= f.label :institution %><br />
+    <%= f.text_field :institution %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :cv_id %><br />
+    <%= f.number_field :cv_id %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

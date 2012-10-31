@@ -2,6 +2,12 @@
 
 <table>
   <tr>
+    <th>Activities</th>
+    <th>Degree</th>
+    <th>Endtime</th>
+    <th>Institution</th>
+    <th>Start time</th>
+    <th>Cv</th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,6 +15,12 @@
 
 <% @educations.each do |education| %>
   <tr>
+    <td><%= education.activities %></td>
+    <td><%= education.degree %></td>
+    <td><%= education.endtime %></td>
+    <td><%= education.institution %></td>
+    <td><%= education.start_time %></td>
+    <td><%= education.cv_id %></td>
     <td><%= link_to 'Show', education %></td>
     <td><%= link_to 'Edit', edit_education_path(education) %></td>
     <td><%= link_to 'Destroy', education, method: :delete, data: { confirm: 'Are you sure?' } %></td>

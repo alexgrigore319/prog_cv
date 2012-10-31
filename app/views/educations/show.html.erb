@@ -1,5 +1,35 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <b>Activities:</b>
+  <%= @education.activities %>
+</p>
+
+<p>
+  <b>Degree:</b>
+  <%= @education.degree %>
+</p>
+
+<p>
+  <b>Endtime:</b>
+  <%= @education.endtime %>
+</p>
+
+<p>
+  <b>Institution:</b>
+  <%= @education.institution %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @education.start_time %>
+</p>
+
+<p>
+  <b>Cv:</b>
+  <%= @education.cv_id %>
+</p>
+
 
 <%= link_to 'Edit', edit_education_path(@education) %> |
 <%= link_to 'Back', educations_path %>

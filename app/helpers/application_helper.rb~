@@ -1,7 +1,7 @@
 module ApplicationHelper
  def full_title(page_title)
    default_title = "Alexandru Grigore"
-   if page_title.empty?
+   if page_tile.empty?
       default_title
    else 
       "#{page_title} | #{default_title}"

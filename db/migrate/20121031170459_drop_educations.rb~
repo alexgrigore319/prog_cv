@@ -1,0 +1,10 @@
+class DropEducations < ActiveRecord::Migration
+  def up
+    drop_table('educations')
+    drop_table('experiences')
+    drop_table('companys')
+  end
+
+  def down
+  end
+end
