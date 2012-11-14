@@ -18,7 +18,7 @@ class ExperiencesControllerTest < ActionController::TestCase
 
   test "should create experience" do
     assert_difference('Experience.count') do
-      post :create, experience: {  }
+      post :create, experience: { cv_id: @experience.cv_id, description: @experience.description, end_time: @experience.end_time, job_title: @experience.job_title, start_time: @experience.start_time }
     end
 
     assert_redirected_to experience_path(assigns(:experience))
@@ -35,7 +35,7 @@ class ExperiencesControllerTest < ActionController::TestCase
   end
 
   test "should update experience" do
-    put :update, id: @experience, experience: {  }
+    put :update, id: @experience, experience: { cv_id: @experience.cv_id, description: @experience.description, end_time: @experience.end_time, job_title: @experience.job_title, start_time: @experience.start_time }
     assert_redirected_to experience_path(assigns(:experience))
   end
 

@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031170459) do
+ActiveRecord::Schema.define(:version => 20121114160751) do
+
+  create_table "companies", :force => true do |t|
+    t.string   "address"
+    t.text     "description"
+    t.integer  "exp_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "cvs", :force => true do |t|
     t.text     "about"
@@ -47,8 +55,13 @@ ActiveRecord::Schema.define(:version => 20121031170459) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
+    t.string   "token"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["token"], :name => "index_users_on_token"
 
 end

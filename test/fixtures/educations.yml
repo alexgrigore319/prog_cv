@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  activities: MyString
+  activities: MyText
   degree: MyString
-  endtime: 2012-10-31 19:11:03
+  end_time: 2012-10-31 23:00:37
   institution: MyString
-  start_time: 2012-10-31 19:11:03
+  start_time: 2012-10-31 23:00:37
   cv_id: 1
 
 two:
-  activities: MyString
+  activities: MyText
   degree: MyString
-  endtime: 2012-10-31 19:11:03
+  end_time: 2012-10-31 23:00:37
   institution: MyString
-  start_time: 2012-10-31 19:11:03
+  start_time: 2012-10-31 23:00:37
   cv_id: 1

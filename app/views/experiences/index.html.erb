@@ -2,6 +2,11 @@
 
 <table>
   <tr>
+    <th>Description</th>
+    <th>End time</th>
+    <th>Job title</th>
+    <th>Start time</th>
+    <th>Cv</th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,6 +14,11 @@
 
 <% @experiences.each do |experience| %>
   <tr>
+    <td><%= experience.description %></td>
+    <td><%= experience.end_time %></td>
+    <td><%= experience.job_title %></td>
+    <td><%= experience.start_time %></td>
+    <td><%= experience.cv_id %></td>
     <td><%= link_to 'Show', experience %></td>
     <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
     <td><%= link_to 'Destroy', experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
