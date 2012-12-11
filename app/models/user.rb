@@ -18,6 +18,10 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 8 }
   validates :password_confirmation, presence: true
 
+  def show_names
+    User.where(:first_name => self.first_name)
+  end
+ 
   private
     def create_token
       self.token = SecureRandom.urlsafe_base64

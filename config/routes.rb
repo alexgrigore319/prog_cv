@@ -2,6 +2,9 @@ ProgCv::Application.routes.draw do
  
   resources :users
 
+  resources :educations
+  resources :experiences
+
   resources :companies
 
   resources :cvs
@@ -15,6 +18,7 @@ ProgCv::Application.routes.draw do
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', :via => :delete
+  match '/users/:id/names', to: 'users#show_same_names', :via => :get, action:'show_same_users'
  
   # The priority is based upon order of creation:
   # first created -> highest priority.

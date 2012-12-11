@@ -17,7 +17,7 @@ User<p id="notice"><%= notice %></p>
 
 
 <% if @user.cv.nil? %>
-<%= render '/cvs/new' %>
+<%= render :partial => '/cvs/new' %>
 <% else %>
 <%= render 'cvs/show' %>
 <% end %>

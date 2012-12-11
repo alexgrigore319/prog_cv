@@ -1,6 +1,6 @@
 <% @experience = Experience.new %>
 <%= form_for(@experience) do |f| %>
-<% f.hidden_field 'cv_id', current_user.cv.id  %>
+<% f.hidden_field 'cv_id', @current_user.cv.id  %>
   <% if @experience.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@experience.errors.count, "error") %> prohibited this experience from being saved:</h2>
